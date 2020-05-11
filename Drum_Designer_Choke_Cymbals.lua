@@ -26,9 +26,9 @@ function onNote(e)
 	then
 		if NewNote == 0 then
 			fadeout(idLastChokedA, FadeTime, true)
-	    	releaseVoice(idLastChokedA)
+			releaseVoice(idLastChokedA)
 			fadeout(idLastChokedB, FadeTime, true)
-    		releaseVoice(idLastChokedB)
+			releaseVoice(idLastChokedB)
 		end
 		if FirstNote == 1 then
 			FirstNote = 0
@@ -36,11 +36,11 @@ function onNote(e)
 		end
 		NewNote = NewNote + 1
 		LastLayer = e.layer
-    	if NewNote == 1 then
-    		idLastChokedA = postEvent(e)
-    	else
-    		idLastChokedB = postEvent(e)
-    		NewNote = 0
+		if NewNote == 1 then
+			idLastChokedA = postEvent(e)
+		else
+			idLastChokedB = postEvent(e)
+			NewNote = 0
 		end
 	end
 end
